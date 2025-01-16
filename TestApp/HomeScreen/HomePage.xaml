@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		     xmlns:local="clr-namespace:TestApp.HomeScreen"
+			 x:Class="TestApp.HomeScreen.HomePage"
+             Title="HomePage">
+
+     <ScrollView>
+       <FlexLayout x:Name="flexLayout"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceAround" >
+            <!-- Menu Option 1 -->
+            <Button TextColor="Black" BackgroundColor="White"  HeightRequest="100" Padding="10" Clicked="AddItem" ImageSource="plus.png">
+                <Button.Text>Add New item</Button.Text>
+            </Button>
+
+            <!-- Menu Option 2 -->
+            
+            <Button TextColor="Black" BackgroundColor="White" HeightRequest="100" Padding="10" Clicked="NewBill" ImageSource="bill.png">
+            <Button.Text>New Bill</Button.Text>
+            </Button>
+
+            <Button TextColor="Black" BackgroundColor="White" HeightRequest="100" Padding="10" Command="{Binding CreateBillCommand}" ImageSource="search.png">
+            <Button.Text>Search Inventory</Button.Text>
+            </Button>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

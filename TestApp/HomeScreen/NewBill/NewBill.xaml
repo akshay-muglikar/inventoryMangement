@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.HomeScreen.NewBill.NewBill"
+             Title="NewBill">
+     <ScrollView Padding="20">
+        <StackLayout Spacing="15">
+
+            <!-- Bill Name -->
+            <Entry x:Name="NameEntry" Placeholder="Enter Customer Name" Text="{Binding Name}" />
+
+            <!-- Bill Mobile -->
+            <Entry x:Name="MobileEntry" Placeholder="Enter Customer Mobile" Keyboard="Numeric"  Text="{Binding Mobile}"/>
+
+            <!-- Bill Amount -->
+            <Entry x:Name="BillAmountEntry"  Text="{Binding Amount}" />
+
+            <!-- Bill Items Section -->
+            <Label Text="Bill Items" FontSize="18" />
+
+            <Button Text="Add Item" Command="{Binding AddItemCommand}" />
+
+            <CollectionView ItemsSource="{Binding BillItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Amount}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Submit Bill Button -->
+            <Button Text="Submit Bill" Command="{Binding SubmitBillCommand}" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
