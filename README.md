@@ -1,3 +1,3 @@
 # Inventory Mangement
-Inventory and Billing Mangement Application
+Inventory and Billing Mangement Application Android/iOS Application
 
