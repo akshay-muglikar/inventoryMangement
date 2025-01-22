@@ -4,8 +4,8 @@ namespace TestApp.HomeScreen.AddItem;
 
 using System.ComponentModel;
 using System.Windows.Input;
-using TestApp.Domain.Model;
-using TestApp.Domain.Repository;
+using InventoryDomain.Model;
+using InventoryDomain.Repository;
 
 public class AddItemViewModel : INotifyPropertyChanged
 {

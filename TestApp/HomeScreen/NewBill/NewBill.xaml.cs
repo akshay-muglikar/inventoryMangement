@@ -1,5 +1,5 @@
 using System.Windows.Input;
-using TestApp.Domain.Repository;
+using InventoryDomain.Repository;
 
 namespace TestApp.HomeScreen.NewBill;
 

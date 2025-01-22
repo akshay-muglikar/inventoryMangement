@@ -1,7 +1,7 @@
 
 using CommunityToolkit.Maui.Views;
 using System;
-using TestApp.Domain.Model;
+using InventoryDomain.Model;
 namespace TestApp.HomeScreen.NewBill;
 
 public partial class AddBillItem : Popup  

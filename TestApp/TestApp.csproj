@@ -71,10 +71,10 @@
 		<PrivateAssets>all</PrivateAssets>
 		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	</PackageReference>
-	<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	<Content Include="T3.db">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
    </Content>
-	</ItemGroup>
+   	  <ProjectReference Include="../InventoryDomain/InventoryDomain.csproj" />
 
+	</ItemGroup>
 </Project>

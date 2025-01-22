@@ -3,8 +3,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using CommunityToolkit.Maui.Views;
-using TestApp.Domain.Model;
-using TestApp.Domain.Repository;
+using InventoryDomain.Model;
+using InventoryDomain.Repository;
 
 namespace TestApp.HomeScreen.NewBill;
 

@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using TestApp.Context;
 using TestApp.Constants;
-using TestApp.Domain.Repository;
+using InventoryDomain.Repository;
 using TestApp.HomeScreen;
 using TestApp.HomeScreen.AddItem;
 using CommunityToolkit.Maui;
+using InventoryDomain.Context;
 namespace TestApp;
 
 public static class MauiProgram

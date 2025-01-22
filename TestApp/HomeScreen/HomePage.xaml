@@ -5,24 +5,163 @@
 			 x:Class="TestApp.HomeScreen.HomePage"
              Title="HomePage">
 
-     <ScrollView>
-       <FlexLayout x:Name="flexLayout"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround" >
-            <!-- Menu Option 1 -->
-            <Button TextColor="Black" BackgroundColor="White"  HeightRequest="100" Padding="10" Clicked="AddItem" ImageSource="plus.png">
-                <Button.Text>Add New item</Button.Text>
-            </Button>
+ <ScrollView>
+    <FlexLayout x:Name="flexLayout"
+                Wrap="Wrap"
+                JustifyContent="SpaceAround"
+                AlignItems="Center"
+                Direction="Row"
+                Padding="10">
+        
+        <!-- Header -->
+        <Label Text="Inventory Management"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="DarkSlateBlue"
+               HorizontalOptions="Center"
+               Margin="0,10,0,20"/>
 
-            <!-- Menu Option 2 -->
-            
-            <Button TextColor="Black" BackgroundColor="White" HeightRequest="100" Padding="10" Clicked="NewBill" ImageSource="bill.png">
-            <Button.Text>New Bill</Button.Text>
-            </Button>
+        <!-- Menu Option 1 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AddItem" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <Image Source="plus.png" HeightRequest="50" />
+                <Button Text="Add New Item"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                        Clicked="AddItem" />
+            </StackLayout>
+        </Frame>
+        
+        <!-- Menu Option 2 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+               <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="NewBill" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <Image Source="bill.png" HeightRequest="50" />
+                <Button Text="New Bill"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                        Clicked="NewBill" />
+            </StackLayout>
+        </Frame>
+        
+        <!-- Menu Option 3 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+                   <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BillHistory" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <Image Source="history.png" HeightRequest="50" />
+                <Button Text="Billing History"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                        Clicked="BillHistory" />
+            </StackLayout>
+        </Frame>
 
-            <Button TextColor="Black" BackgroundColor="White" HeightRequest="100" Padding="10" Command="{Binding CreateBillCommand}" ImageSource="search.png">
-            <Button.Text>Search Inventory</Button.Text>
-            </Button>
-        </FlexLayout>
-    </ScrollView>
+        <!-- Menu Option 4 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+               <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ListItems" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <Image Source="search.png" HeightRequest="50" />
+                <Button Text="Search Inventory"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                         />
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu Option 5 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <StackLayout>
+                <Image Source="update.png" HeightRequest="50" />
+                <Button Text="Update Inventory"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                         />
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu Option 6 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <StackLayout>
+                <Image Source="delete.png" HeightRequest="50" />
+                <Button Text="Delete Item"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                        />
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu Option 7 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <StackLayout>
+                <Image Source="report.png" HeightRequest="50" />
+                <Button Text="Reports"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                         />
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu Option 8 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <StackLayout>
+                <Image Source="settings.png" HeightRequest="50" />
+                <Button Text="Settings"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                         />
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu Option 9 -->
+        <Frame BackgroundColor="white"
+               CornerRadius="10"
+               Margin="10"
+               WidthRequest="150">
+            <StackLayout>
+                <Image Source="help.png" HeightRequest="50" />
+                <Button Text="Help and Support"
+                        TextColor="DarkBlue"
+                        BackgroundColor="Transparent"
+                         />
+            </StackLayout>
+        </Frame>
+
+    </FlexLayout>
+</ScrollView>
+
+
+
 </ContentPage>

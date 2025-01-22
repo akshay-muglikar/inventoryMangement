@@ -3,8 +3,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using TestApp.Domain.Model;
-using TestApp.Domain.Repository;
+using InventoryDomain.Model;
+using InventoryDomain.Repository;
 
 namespace TestApp.HomeScreen;
 

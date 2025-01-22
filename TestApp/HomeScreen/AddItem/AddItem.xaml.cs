@@ -1,4 +1,4 @@
-using TestApp.Domain.Repository;
+using InventoryDomain.Repository;
 
 namespace TestApp.HomeScreen.AddItem;
 

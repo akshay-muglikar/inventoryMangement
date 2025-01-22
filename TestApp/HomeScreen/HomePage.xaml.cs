@@ -1,6 +1,6 @@
 
-using TestApp.Domain.Model;
-using TestApp.Domain.Repository;
+using InventoryDomain.Model;
+using InventoryDomain.Repository;
 using TestApp.HomeScreen.AddItem;
 
 namespace TestApp.HomeScreen;
@@ -25,9 +25,10 @@ public partial class HomePage : ContentPage
 	async void NewBill(object sender, EventArgs e){
 		await Navigation.PushAsync(new TestApp.HomeScreen.NewBill.NewBill(_itemRepository,_billRepository));
 	}
+	async void BillHistory(object sender, EventArgs e){
+		await Navigation.PushAsync(new TestApp.HomeScreen.BillHistory(_itemRepository,_billRepository));
+	}
 	async void ListItems(object sender, EventArgs e){
-		//items = await _itemRepository.GetAsync();
-		//BindingContext = new ItemsViewModel(items);
-
+		await Navigation.PushAsync(new TestApp.HomeScreen.Search.Search(_itemRepository,_billRepository));
 	}
 }
